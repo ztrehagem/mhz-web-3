@@ -1,0 +1,7 @@
+.jshintrc
+node_modules/
+public/**/*.html
+public/js/*
+!public/js/lib/
+public/css/*
+!public/css/lib/

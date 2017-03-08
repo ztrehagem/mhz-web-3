@@ -1,0 +1,24 @@
+{
+  "name": "mhz-web-3",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztrehagem/mhz-web-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztrehagem/mhz-web-3/issues"
+  },
+  "homepage": "https://github.com/ztrehagem/mhz-web-3#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "z-elixir": "git+https://github.com/ztrehagem/z-elixir.git#v1.1.1"
+  }
+}
