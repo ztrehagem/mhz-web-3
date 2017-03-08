@@ -5,7 +5,7 @@ modules.app
 
   this.load = function() {
     if (this.promise) return;
-    this.promise = zpsApiExec.get('/contents.json').then(function(response) {
+    this.promise = zpsApiExec.get('/contents.json?' + viewTime).then(function(response) {
       return response.data;
     });
     return this.promise;

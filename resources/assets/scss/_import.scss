@@ -20,7 +20,6 @@
 }
 
 @mixin card {
-	background-color: white;
 	box-shadow: 0 0.5px 3px $cl_dark;
 	@include transition;
 	transition-property: box-shadow;

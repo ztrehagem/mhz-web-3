@@ -13,6 +13,10 @@ body {
   @include text-link-color( $cl-light );
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 header {
   $height: 50px;
 
@@ -53,6 +57,14 @@ header {
   @include clearfix;
 }
 
+#main {
+  width: 100%;
+
+  &.modal-open {
+    position: fixed;
+  }
+}
+
 #contents {
   background-color: $cl-light;
   @include text-link-color( $cl-dark );
@@ -68,6 +80,7 @@ header {
     $size: 200px;
 
     > article {
+      @include card;
       display: inline-block;
       position: relative;
       height: $size;
@@ -75,8 +88,7 @@ header {
       margin: 1rem;
       overflow: hidden;
       vertical-align: middle;
-
-      @include card;
+      background-color: transparent;
 
       > * {
         display: block;
@@ -84,12 +96,14 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        max-width: 100%;
+        width: $size;
         word-wrap: break-word;
         overflow-wrap: break-word;
       }
 
       img {
+        height: $size;
+        object-fit: cover;
         vertical-align: bottom;
       }
     }
@@ -121,5 +135,24 @@ footer {
 
   > .copyright {
     font-size: 0.7rem;
+  }
+}
+
+#item-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  > .modal-body {
+    position: relative;
+    background-color: white;
+    @include text-link-color($cl-dark);
+    display: table;
+    margin: 1rem auto;
+    width: 95%;
+    max-width: 400px;
   }
 }

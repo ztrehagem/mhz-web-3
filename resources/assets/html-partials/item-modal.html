@@ -1,0 +1,28 @@
+<div class="modal-body" ng-click="$event.stopPropagation()">
+  <div>
+    <button type="button" ng-click="close()">close</button>
+  </div>
+
+  <hr>
+
+  <div>
+    <h3>{{item.title}}</h3>
+    <span>{{item.date}}</span>
+  </div>
+
+  <img ng-if="item.img" ng-src="{{item.img}}" alt="{{item.title}}">
+
+  <div ng-if="item.description">
+    <p ng-repeat="p in item.description">
+      <span ng-repeat="line in p">{{line}}</span><br>
+    </p>
+  </div>
+
+  <div>
+    <a ng-repeat="(name, url) in item.links" ng-href="{{url}}">&gt;&gt; {{name}}</a>
+  </div>
+
+  <div>
+    <span ng-repeat="tag in item.tags">#{{tag}}</span>
+  </div>
+</div>

@@ -5,3 +5,4 @@ public/js/*
 !public/js/lib/
 public/css/*
 !public/css/lib/
+public/contents.json

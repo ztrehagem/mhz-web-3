@@ -10,32 +10,15 @@
   </div>
 </header>
 
-<section id="contents" ng-controller="root">
+<section id="contents" ng-controller="root as ctrl">
   <div class="filters">
     filters
   </div>
 
   <div class="boxes">
-    <article>
-      <img src="/img/jacket/15052-mhz-rebuild.png" alt="rebuild">
-    </article>
-    <article>
-      <img src="/img/jacket/15052-mhz-rebuild.png" alt="rebuild">
-    </article>
-    <article>
-      <strong>Rebuildaaaaaaaaaaacccccccccc bbbbbbbbbbbb</strong>
-    </article>
-    <article>
-      <strong>Rebuildaaaaaaaaaaacccccccccc bbbbbbbbbbbb</strong>
-    </article>
-    <article>
-      <strong>Rebuildaaaaaaaaaaacccccccccc bbbbbbbbbbbb</strong>
-    </article>
-    <article>
-      <img src="/img/jacket/15052-mhz-rebuild.png" alt="rebuild">
-    </article>
-    <article>
-      <img src="/img/jacket/15052-mhz-rebuild.png" alt="rebuild">
+    <article ng-repeat="item in ctrl.contents" class="clickable" ng-click="ctrl.openModal(item)">
+      <img ng-if="item.img" ng-src="{{item.img}}" alt="{{item.title}}">
+      <strong ng-if="!item.img">{{item.title}}</strong>
     </article>
   </div>
 </section>
