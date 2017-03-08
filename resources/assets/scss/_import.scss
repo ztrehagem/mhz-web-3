@@ -1,0 +1,33 @@
+@import "_colors.scss";
+
+@mixin clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin transition() {
+    transition: .25s;
+}
+
+@mixin text-link-color( $color ) {
+    color: $color;
+    a {
+        color: $color;
+    }
+}
+
+@mixin card {
+	background-color: white;
+	box-shadow: 0 0.5px 3px $cl_dark;
+	@include transition;
+	transition-property: box-shadow;
+
+	&:hover {
+		box-shadow: 0 2px 12px $cl_dark;
+	}
+}
+
+$bp: 600px;

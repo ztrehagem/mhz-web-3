@@ -9,6 +9,10 @@ config.enabledNgAnnotate = true;
 Resource('html', Resource.template('html')
   .dest('')
 );
+Resource('html-partials', Resource.create()
+  .src('html-partials/**/*.html')
+  .dest('html/')
+);
 Resource('sass', Resource.template('sass'));
 Resource('js', Resource.create()
   .src('js/*')
@@ -23,7 +27,7 @@ Resource('contents', Resource.create()
 
 // TODO include html/css/js build version query
 
-Task('html', ['html'], Task.template('html'));
+Task('html', ['html', 'html-partials'], Task.template('html'));
 Task('sass', ['sass'], Task.template('sass'));
 Task('js', ['js'], Task.template('js'));
 Task('content', ['contents'], Task.template('pretty'));
