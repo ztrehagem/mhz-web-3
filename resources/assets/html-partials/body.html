@@ -1,16 +1,56 @@
-<header>
+<header ng-controller="header as ctrl">
   <h1>Megahertz</h1>
-  <div>
-    <a href="#bio-sound">
+
+  <div class="bio-nav">
+    <a class="clickable" ng-click="ctrl.open('sound')" ng-class="{active: ctrl.openedName == 'sound'}">
       <i class="fa fa-fw fa-headphones"></i>
     </a>
-    <a href="#bio-tech">
+    <a class="clickable" ng-click="ctrl.open('tech')" ng-class="{active: ctrl.openedName == 'tech'}">
       <i class="fa fa-fw fa-laptop"></i>
     </a>
   </div>
+
+  <div class="bio">
+    <article data-article-name="sound">
+      <p>
+        シンセサウンドをメインとしたエレクトロニックな楽曲を得意とし、Web上での公開、イベントでのCD頒布などを行っている。<br>
+        その傍ら、ボーカル編集やミックス・マスタリングを担うこともある。
+      </p>
+      <div class="links">
+        <a href="http://twitter.com/ztrehagem" target="_blank">
+          <i class="fa fa-fw fa-twitter"></i>
+          <span>Twitter</span>
+        </a>
+        <a href="http://soundcloud.com/ztrehagem" target="_blank">
+          <i class="fa fa-fw fa-soundcloud"></i>
+          <span>SoundCloud</span>
+        </a>
+        <a href="http://megahertz.booth.pm" target="_blank">
+          <i class="fa fa-fw fa-shopping-cart"></i>
+          <span>BOOTH</span>
+        </a>
+      </div>
+    </article>
+    <article data-article-name="tech">
+      <p>
+        アマチュアとしての楽曲制作活動を通して、ウェブサイト・特設サイト制作を経験する。<br>
+        その後も複数のコーポレートサイト制作やWEBサービスのフロントエンド開発などに携わり、技術を磨き続けている。
+      </p>
+      <p>
+        アーティスティックでシンプル・フラットなデザインを得意とする。<br>
+        レスポンシブ対応はもちろんのこと、文書としてのHTMLを意識したコードスタイルにもこだわっている。
+      </p>
+      <div class="links">
+        <a href="http://github.com/ztrehagem" target="_blank">
+          <i class="fa fa-fw fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </article>
+  </div>
 </header>
 
-<section id="contents" ng-controller="root as ctrl">
+<section id="contents" ng-controller="contents as ctrl">
   <div class="filters">
     <label ng-repeat="tag in ctrl.tags" ng-class="{selected: ctrl.selectedTag == tag}" class="clickable">
       <input type="radio" ng-model="ctrl.selectedTag" ng-value="tag">
@@ -20,14 +60,14 @@
 
   <ul class="boxes">
     <li ng-repeat="item in ctrl.contents | contentsFilter:ctrl.selectedTag" class="clickable" ng-click="ctrl.openModal(item)">
+      <strong>{{item.title}}</strong>
       <img ng-if="item.img" ng-src="{{item.img}}" alt="{{item.title}}">
-      <strong ng-if="!item.img">{{item.title}}</strong>
     </li>
   </ul>
 </section>
 
 <footer>
-  <div class="link">
+  <!-- <div class="link">
 
     <a href="#">
       <i class="fa fa-fw fa-twitter"></i>
@@ -45,7 +85,7 @@
       <i class="fa fa-fw fa-shopping-cart"></i>
     </a>
 
-  </div>
+  </div> -->
   <div class="copyright">
     <i class="fa fa-fw fa-copyright"></i>
     <span>Megahertz</span>

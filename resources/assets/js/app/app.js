@@ -1,6 +1,33 @@
 modules.app
 
-.controller('root', function(contents, itemModal, arrayUtils) {
+.controller('header', function($element) {
+  'ngInject';
+
+  var ctrl = this;
+
+  var elem = {
+    sound: $element.find('.bio article[data-article-name~="sound"]').hide(),
+    tech: $element.find('.bio article[data-article-name~="tech"]').hide()
+  };
+
+  ctrl.openedName = null;
+
+  ctrl.open = function(name) {
+    if (!ctrl.openedName) {
+      ctrl.openedName = name;
+      elem[name].slideDown('fast');
+    } else if (ctrl.openedName == name) {
+      ctrl.openedName = null;
+      elem[name].slideUp('fast');
+    } else {
+      elem[ctrl.openedName].slideUp('fast');
+      ctrl.openedName = name;
+      elem[name].slideDown('fast');
+    }
+  };
+})
+
+.controller('contents', function(contents, itemModal, arrayUtils) {
   'ngInject';
 
   var ctrl = this;

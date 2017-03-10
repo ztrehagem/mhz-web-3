@@ -21,7 +21,6 @@ header {
   $height: 50px;
 
   width: 100%;
-  height: $height;
 
   > h1 {
     float: left;
@@ -32,7 +31,7 @@ header {
     font-family: 'Poiret One';
   }
 
-  > div {
+  > .bio-nav {
     float: right;
     height: $height;
 
@@ -49,9 +48,45 @@ header {
       &:hover {
         background-color: $cl-gray;
       }
+
+      &.active {
+        background-color: $cl-light;
+        color: $cl-dark;
+      }
     }
 
     @include clearfix;
+  }
+
+  > .bio {
+    clear: both;
+
+    > article {
+      padding: 1px;
+
+      > * {
+        margin: 1.5rem;
+      }
+
+      > p {
+      }
+
+      > .links {
+        > a {
+          display: inline-block;
+          text-decoration: none;
+          padding: 0.3rem 0.5rem;
+          margin: 0.3rem;
+          border: 1px solid $cl-light;
+          font-size: 0.8rem;
+
+          &:hover {
+            background-color: $cl-light;
+            color: $cl-dark;
+          }
+        }
+      }
+    }
   }
 
   @include clearfix;
@@ -128,9 +163,16 @@ header {
       }
 
       img {
+        // min-width: $size;
+        // min-height: $size;
         height: $size;
         object-fit: cover;
         vertical-align: bottom;
+        opacity: 1;
+        @include transition;
+      }
+      &:hover > img {
+        opacity: 0.1;
       }
     }
   }
@@ -246,10 +288,10 @@ footer {
         display: inline-block;
         padding: 0.3rem;
 
-        &:hover {
-          text-decoration: underline;
-          color: $cl-gray;
-        }
+        // &:hover {
+        //   text-decoration: underline;
+        //   color: $cl-gray;
+        // }
       }
     }
   }

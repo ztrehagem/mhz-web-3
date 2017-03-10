@@ -68,9 +68,10 @@
 		"links": {
       "特設サイト": "http://info.kamomesano.info/tatsuta2/"
     },
+    "img": "http://info.kamomesano.info/tatsuta2/images/500100.jpg",
 		"title": "tatsuta compilation 2",
 		"description": [
-      ["tatsuta recordings"],
+      ["tatsuta recordings コンピレーションアルバム"],
 			["track.1 echo = reverse"]
 		],
 		"date": "2014-04"
