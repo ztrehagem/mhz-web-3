@@ -52,11 +52,15 @@ modules.app
   };
 
   function onClose() {
-    eMain.removeClass('modal-open');
-    eMain.css({top: 'auto'});
-    eRoot.prop({scrollTop: cachedScrollY});
+    // eMain.removeClass('modal-open');
+    // eMain.css({top: 'auto'});
+    // eRoot.prop({scrollTop: cachedScrollY});
     // eModal.hide();
-    eModal.fadeOut('fast');
+    eModal.fadeOut('fast', function() {
+      eMain.removeClass('modal-open');
+      eMain.css({top: 'auto'});
+      eRoot.prop({scrollTop: cachedScrollY});
+    });
   }
 
   function initElement() {
