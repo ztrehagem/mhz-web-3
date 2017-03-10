@@ -227,28 +227,38 @@ footer {
 
     > .modal-header {
       margin-bottom: 1rem;
+      display: table;
+      width: 100%;
 
-      > button {
-        @include card;
-        color: $cl-gray;
-        float: right;
-        padding: 0.5rem;
-        border: 1px solid $cl-lightgray;
-        background-color: $cl-light;
-      }
       > div {
-        float: left;
+          display: table-cell;
 
-        h3 {
-          margin: 0 0 0.1rem 0;
-          font-size: 1rem;
+        &.button {
+          text-align: right;
+          padding-left: 1rem;
+
+          > button {
+            @include card;
+            color: $cl-gray;
+            padding: 0.5rem;
+            border: 1px solid $cl-lightgray;
+            background-color: $cl-light;
+          }
         }
 
-        span {
-          color: $cl-gray;
-          font-size: 0.7rem;
+        &.title {
+          h3 {
+            margin: 0 0 0.1rem 0;
+            font-size: 1rem;
+          }
+
+          span {
+            color: $cl-gray;
+            font-size: 0.7rem;
+          }
         }
       }
+
       @include clearfix;
     }
 
