@@ -1,28 +1,32 @@
-<div class="modal-body" ng-click="$event.stopPropagation()">
-  <div>
-    <button type="button" ng-click="close()">close</button>
+<div class="modal-window" ng-click="$event.stopPropagation()">
+  <div class="modal-header">
+    <button type="button" class="clickable" ng-click="close()">
+      <i class="fa fa-fw fa-times"></i>
+    </button>
+    <div>
+      <h3>{{item.title}}</h3>
+      <span>{{item.date}}</span>
+    </div>
   </div>
 
-  <hr>
-
-  <div>
-    <h3>{{item.title}}</h3>
-    <span>{{item.date}}</span>
+  <div class="main-img" ng-if="item.img">
+    <img ng-src="{{item.img}}" alt="{{item.title}}">
   </div>
 
-  <img ng-if="item.img" ng-src="{{item.img}}" alt="{{item.title}}">
-
-  <div ng-if="item.description">
+  <div ng-if="item.description.length">
     <p ng-repeat="p in item.description">
       <span ng-repeat="line in p">{{line}}</span><br>
     </p>
   </div>
 
-  <div>
-    <a ng-repeat="(name, url) in item.links" ng-href="{{url}}">&gt;&gt; {{name}}</a>
+  <div ng-if="item.links" class="links">
+    <a ng-repeat="(name, url) in item.links" ng-href="{{url}}" target="_blank">
+      <i class="fa fa-fw fa-external-link"></i>
+      <span>{{name}}</span>
+    </a>
   </div>
 
-  <div>
-    <span ng-repeat="tag in item.tags">#{{tag}}</span>
+  <div class="tags">
+    <a ng-repeat="tag in item.tags" ng-href="#tag-{{tag}}">#{{tag}}</a>
   </div>
 </div>

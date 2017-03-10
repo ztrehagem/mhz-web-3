@@ -12,15 +12,18 @@
 
 <section id="contents" ng-controller="root as ctrl">
   <div class="filters">
-    filters
+    <label ng-repeat="tag in ctrl.tags" ng-class="{selected: ctrl.selectedTag == tag}" class="clickable">
+      <input type="radio" ng-model="ctrl.selectedTag" ng-value="tag">
+      <span>{{tag || 'all'}}</span>
+    </label>
   </div>
 
-  <div class="boxes">
-    <article ng-repeat="item in ctrl.contents" class="clickable" ng-click="ctrl.openModal(item)">
+  <ul class="boxes">
+    <li ng-repeat="item in ctrl.contents | contentsFilter:ctrl.selectedTag" class="clickable" ng-click="ctrl.openModal(item)">
       <img ng-if="item.img" ng-src="{{item.img}}" alt="{{item.title}}">
       <strong ng-if="!item.img">{{item.title}}</strong>
-    </article>
-  </div>
+    </li>
+  </ul>
 </section>
 
 <footer>

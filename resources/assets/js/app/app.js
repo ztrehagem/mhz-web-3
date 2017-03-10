@@ -1,16 +1,32 @@
 modules.app
 
-.controller('root', function(contents, itemModal) {
+.controller('root', function(contents, itemModal, arrayUtils) {
   'ngInject';
 
   var ctrl = this;
 
   contents.load().then(function(contents) {
     ctrl.contents = contents;
+
+    ctrl.tags = [null].concat(arrayUtils.uniq(arrayUtils.join(contents.map(function(item) {
+      return item.tags;
+    }))).sort());
   });
 
   ctrl.openModal = function(item) {
     itemModal.open(item);
+  };
+})
+
+.filter('contentsFilter', function() {
+  'ngInject';
+
+  return function(contents, selectedTag) {
+    return !selectedTag ? contents : (contents && contents.filter(function(item) {
+      return item.tags && item.tags.some(function(tag) {
+        return tag == selectedTag;
+      });
+    }));
   };
 })
 

@@ -1,20 +1,20 @@
 [
 	{
-    "tags": ["vocal-edit", "mixing"],
+    "tags": ["vocal-edit"],
     "links": {
       "YouTube": "https://www.youtube.com/watch?v=ZYzQk6nfi_s"
     },
     "title": "【歌ってみた】You are the only_小野正利",
     "date": "2017-03"
   },{
-    "tags": ["vocal-edit", "mixing"],
+    "tags": ["vocal-edit"],
     "links": {
       "YouTube": "https://www.youtube.com/watch?v=b6KQEyJRIlE"
     },
     "title": "【歌ってみた】Crying moon_Mint jam",
     "date": "2016-09"
   },{
-		"tags": ["music","web"],
+		"tags": ["sound-original","web"],
 		"links": {
       "特設サイト": "http://goldenmoai.web.fc2.com/cds/section-red/"
     },
@@ -33,7 +33,7 @@
 		"title": "パルチザン合同会社 コーポレートサイト",
 		"date": "2016-02"
 	},{
-		"tags": ["music","web"],
+		"tags": ["sound-original","web"],
 		"links": {
       "特設サイト": "http://goldenmoai.web.fc2.com/cds/section-blue/"
     },
@@ -45,7 +45,7 @@
 		],
 		"date": "2015-10"
 	},{
-		"tags": ["music","web"],
+		"tags": ["sound-original","web"],
 		"links": {
       "特設サイト": "http://megahertz.michikusa.jp/cds/rebuild/"
     },
@@ -64,7 +64,7 @@
 		"title": "恋の魔法歌ってみた＠宮本彩陽",
 		"date": "2014-05"
 	},{
-		"tags": ["sound_remix"],
+		"tags": ["sound-remix"],
 		"links": {
       "特設サイト": "http://info.kamomesano.info/tatsuta2/"
     },
