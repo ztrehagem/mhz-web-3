@@ -20,5 +20,8 @@
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "z-elixir": "git+https://github.com/ztrehagem/z-elixir.git#v1.1.1"
+  },
+  "dependencies": {
+    "del": "^2.2.2"
   }
 }

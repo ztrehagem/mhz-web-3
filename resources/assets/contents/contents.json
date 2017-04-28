@@ -1,10 +1,25 @@
 [
 	{
+		"tags": ["sound-original", "web"],
+		"title": "elmina 01",
+		"date": "2017-04",
+		"description": [
+			["elmina コンピレーションアルバム"],
+			["track.2 Floating", "track.6 Tautology", "mastering"]
+		],
+		"img": "/img/jacket/17041-elmina-elmina01.jpg",
+		"links": {
+			"特設サイト": "http://megahertz.webcrow.jp/elmina/elmina01"
+		}
+	},{
     "tags": ["vocal-edit"],
     "links": {
       "YouTube": "https://www.youtube.com/watch?v=ZYzQk6nfi_s"
     },
     "title": "【歌ってみた】You are the only_小野正利",
+		"description": [
+			["vocal-edit/mix/mastering"]
+		],
     "date": "2017-03"
   },{
     "tags": ["vocal-edit"],
@@ -12,6 +27,9 @@
       "YouTube": "https://www.youtube.com/watch?v=b6KQEyJRIlE"
     },
     "title": "【歌ってみた】Crying moon_Mint jam",
+		"description": [
+			["vocal-edit/mix/mastering"]
+		],
     "date": "2016-09"
   },{
 		"tags": ["sound-original","web"],
@@ -22,7 +40,7 @@
 		"title": "SECTION > RED",
 		"description": [
 			["Golden Moai コンピレーションアルバム"],
-			["track.2 Ruby"]
+			["track.2 Ruby", "mastering"]
 		],
 		"date": "2016-04"
 	},{
@@ -41,7 +59,7 @@
 		"title": "SECTION > BLUE",
 		"description": [
 			["Golden Moai コンピレーションアルバム"],
-			["track.4 Ocean Blue"]
+			["track.4 Ocean Blue", "mastering"]
 		],
 		"date": "2015-10"
 	},{
@@ -62,6 +80,9 @@
       "ニコニコ動画": "http://www.nicovideo.jp/watch/sm23468842"
     },
 		"title": "恋の魔法歌ってみた＠宮本彩陽",
+		"description": [
+			["vocal-edit/mix/mastering"]
+		],
 		"date": "2014-05"
 	},{
 		"tags": ["sound-remix"],
@@ -81,6 +102,9 @@
       "ニコニコ動画": "http://www.nicovideo.jp/watch/sm22221383"
     },
 		"title": "シリョクケンサ歌ってみた＠宮本彩陽",
+		"description": [
+			["vocal-edit/mix/mastering"]
+		],
 		"date": "2013-11"
 	}
 ]

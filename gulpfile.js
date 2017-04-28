@@ -2,9 +2,15 @@ const Zelixir = require('z-elixir');
 const Resource = Zelixir.Resource;
 const Task = Zelixir.Task;
 const config = Zelixir.config;
+const options = Zelixir.options;
 const $ = Zelixir.modules;
+const del = require('del');
 
 config.enabledNgAnnotate = true;
+
+if (options.production) {
+  del.sync(['public/**/*.map']);
+}
 
 Resource('html', Resource.template('html')
   .dest('')
